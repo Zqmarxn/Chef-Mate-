@@ -15,8 +15,7 @@ This document transparently discloses how the team **Hallo world** used generati
 
 ## 2. AI Tools Used
 
-- **[AI tool 1]:** Used during M1 and M2 to [e.g. structure the problem statement, refine the project scope, draft the initial SRS (user stories, non-functional requirements, use cases)].
-- **[AI tool 2]:** Used during M2 and M3 to [e.g. check consistency between the M1 charter, the M2 SRS and the prototype source code, and help organize and debug the single-file HTML/CSS/JS prototype].
+- **Anthropic Claude:** Used across M1 to M3 to help refine requirements wording, check consistency between the M1 charter, the M2 SRS and the prototype, and help organize and debug the single-file HTML/CSS/JS prototype. In M3 it was also used to draft this AI use statement and the final report, modeled on the structure of another team's published example; the team supplied and checked all project facts.
 
 ---
 
@@ -24,9 +23,10 @@ This document transparently discloses how the team **Hallo world** used generati
 
 | Milestone & Date | AI Tool | What We Asked | What AI Produced | Human Verification & Changes Made |
 |---|---|---|---|---|
-| M1 / M2<br>[date] | [tool] | [e.g. Draft a problem statement and scope for a fridge-to-recipe app; structure the SRS] | [e.g. SRS draft covering FR-1 to FR-n, NFR-1 to NFR-n, use cases] | [e.g. Team removed out-of-scope items and aligned requirements with our user interviews on [date]] |
-| M2 / M3<br>[date] | [tool] | [e.g. Check the prototype against the M1 charter and the M2 SRS] | [e.g. List of mismatches between code and SRS] | [e.g. Team reviewed and approved each proposed fix before applying it] |
-| Implementation & M3 testing<br>[date] | [tool] | [e.g. Help organize HTML/CSS/JS components, recipe matching logic, expiry tracking, EN/TH language toggle] | [e.g. Initial UI layout, responsive design, recipe-matching logic] | [e.g. Team reviewed all generated code, fixed issues, tested responsiveness across screen sizes] |
+| M1 / M2<br>Month 1–2 | Claude | Help structure and tighten the problem statement, scope and SRS wording (functional requirements, non-functional requirements, use cases) | Draft wording and structure for the SRS sections | Team compared the draft with its own user findings, removed out-of-scope items and kept only requirements it agreed with |
+| M2 / M3<br>Month 2–3 | Claude | Check the prototype against the M1 charter and the M2 SRS | A list of mismatches between the prototype and the documents | Team reviewed each proposed change and applied only the ones it approved |
+| Implementation & M3 testing<br>Month 3 | Claude | Help organize the HTML/CSS/JS prototype: fridge and expiry tracking, recipe filtering, shopping list, cooking timer, Thai/English switch | Code suggestions and fixes for the single-file prototype | Team opened the prototype in a browser, tested each user flow and fixed issues before submitting |
+| M3 documentation<br>Month 3 | Claude | Draft the AI use statement and final report in English, modeled on another team's example | Markdown drafts of both documents | Team replaced all project facts (names, requirements, features) with its own and checked them against M1 and M2 |
 
 ---
 
@@ -40,5 +40,6 @@ This document transparently discloses how the team **Hallo world** used generati
 
 ## 5. Sample Prompts Used
 
-- **Requirements and scope check:** *"[Your actual prompt, e.g. Check the prototype against our M1 charter and this SRS, and update the SRS so it matches the website while keeping planned features clearly marked as out of scope.]"*
-- **Prototype logic and UI:** *"[Your actual prompt, e.g. Build a standalone HTML/CSS/JS prototype that suggests recipes from the ingredients in the fridge, highlights items close to expiry, and has an English/Thai language switch.]"*
+- **Requirements and scope check:** *"Check this prototype against our M1 charter and M2 SRS, list any mismatches, and suggest wording so the SRS matches what the prototype really does."*
+- **Prototype logic:** *"Help me organize a single-file HTML/CSS/JS prototype for a fridge-to-recipe app: add ingredients with days left before expiry, highlight items close to expiring, filter recipes by expiring items, and add a Thai/English switch."*
+- **Documentation:** *"Write an English AI use statement for our project in the same structure as this Thai example."*
